@@ -213,3 +213,66 @@ if (avgTeamDolphins > avgTeamKoalas && avgTeamDolphins >= 100) {
 } else {
     console.log('No one wins the trophy 😭');
 }
+
+//LECTURE: The switch Statement
+
+switch (language) {
+    case 'chinese':
+    case 'mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers');
+        break
+    case 'english':
+        console.log('3rd place');
+        break;
+    case 'hindi':
+        console.log('Number 4')
+        break;
+    case 'arabic':
+        console.log('5th most spoken language')
+        break;
+    default:
+        console.log('Great language too :D');
+}
+
+//LECTURE: The Conditional (Ternary) Operator
+
+let infoCountry = population > 33 ? `${country}'s population is above average`
+    : `${country}'s population is below average`;
+
+console.log(infoCountry);
+
+population = 13;
+
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`)
+
+population = 130;
+
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`)
+
+population = 6.923;
+
+//--------------------------------------------------------------------------------------------------------
+// Coding Challenge #4
+
+//TEST DATA: Test for bill values 275, 40 and 430
+
+let bill;
+let tip;
+
+bill = 275;
+tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+bill = 40;
+billAtLeast = bill >= 50 && bill <= 300 ? bill * 1.15 : bill * 1.20;
+tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+bill = 430;
+billAtLeast = bill >= 50 && bill <= 300 ? bill * 1.15 : bill * 1.20;
+tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
