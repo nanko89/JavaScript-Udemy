@@ -72,4 +72,6 @@ console.log(describePopulation('Bulgaria', 6.9));
 console.log(describePopulation('France', 67.4));
 console.log(describePopulation('England', 56));
 
+//LECTURE: Introduction to Arrays
+
 
