@@ -26,6 +26,7 @@ function percentageOfWorld1(population) {
 let populationOfBulgaria = percentageOfWorld1(6.9);
 let populationOfFrance = percentageOfWorld1(67.4);
 let populationOfEngland = percentageOfWorld1(56);
+let populationOfChina = percentageOfWorld1(1150);
 
 
 console.log(populationOfBulgaria);
@@ -44,6 +45,7 @@ populationOfFrance =
     `France has 67.4 million people, so it's about ${percentageOfWorld2(67.4)}% of the world population`;
 populationOfEngland =
     `England has 56 million people, so it's about ${percentageOfWorld2(56)}% of the world population`;
+
 
 console.log(populationOfBulgaria);
 console.log(populationOfFrance);
@@ -74,4 +76,10 @@ console.log(describePopulation('England', 56));
 
 //LECTURE: Introduction to Arrays
 
+const populations = new Array(6.9, 67.4, 56, 1150);
 
+console.log(populations.length === 4);
+
+const percentages = new Array(populationOfBulgaria, populationOfFrance, populationOfEngland);
+
+console.log(percentages);
