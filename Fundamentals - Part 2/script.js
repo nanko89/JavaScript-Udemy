@@ -26,7 +26,6 @@ function percentageOfWorld1(population) {
 let populationOfBulgaria = percentageOfWorld1(6.9);
 let populationOfFrance = percentageOfWorld1(67.4);
 let populationOfEngland = percentageOfWorld1(56);
-let populationOfChina = percentageOfWorld1(1150);
 
 
 console.log(populationOfBulgaria);
@@ -92,25 +91,73 @@ const avgKoalas = calcAverage(65, 54, 49);
 console.log(avgDolhins, avgKoalas);
 
 function checkWinner(dolhins, koalas) {
-    if (dolhins < koalas) {
+    if (koalas >= dolhins * 2) {
         return `Koalas win (${koalas} vs. ${dolhins})`
-    } else if (dolhins > koalas) {
+    } else if (dolhins >= koalas * 2) {
         return `Dolhins win (${dolhins} vs. ${koalas})`
     } else {
-        return `Koalas And Dolhins wins (0${dolhins})`
+        return `No one wins ...`
     }
 }
 
 console.log(checkWinner(avgDolhins, avgKoalas));
 
-
-
 //LECTURE: Introduction to Arrays
+
+const popBulgaria = percentageOfWorld1(6.9);
+const popFrance = percentageOfWorld1(67.4);
+const popEngland = percentageOfWorld1(56);
+const popChina = percentageOfWorld1(1150);
 
 const populations = new Array(6.9, 67.4, 56, 1150);
 
 console.log(populations.length === 4);
 
-const percentages = new Array(populationOfBulgaria, populationOfFrance, populationOfEngland);
+const percentages = new Array(popBulgaria, popFrance, popEngland, popChina);
 
 console.log(percentages);
+
+//LECTURE: Basic Array Operations (Methods)
+
+const neighbours = ['Romania', 'Serbia', 'Macedonia', 'Greece', 'Turkey'];
+
+neighbours.push('Utopia');
+neighbours.pop();
+
+if (neighbours.includes('Germany')) {
+    console.log('Yeah your county is in central Europe :D')
+} else {
+    console.log('Probably not a central European country :D')
+
+}
+
+const indexOfMacedonia = neighbours.indexOf('Macedonia');
+
+neighbours[indexOfMacedonia] = 'Republic of Macedonia'
+
+console.log(neighbours);
+
+//-------------------------------------------------------------------------------
+//Coding Challenge #2
+
+const bills = [125, 555, 44];
+
+function calcTip(currentBill) {
+    if (currentBill >= 50 && currentBill <= 300) {
+        return 15;
+    } else {
+        return 20;
+    }
+}
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+console.log(tips);
+
+const totalValue = [bills[0] * ((tips[0] / 100) + 1),
+                    bills[1] * ((tips[1] / 100) + 1),
+                    bills[2] * ((tips[2] / 100) + 1)];
+
+console.log(totalValue);
+
+//LECTURE: Introduction to Objects
