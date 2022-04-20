@@ -155,9 +155,102 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 console.log(tips);
 
 const totalValue = [bills[0] * ((tips[0] / 100) + 1),
-                    bills[1] * ((tips[1] / 100) + 1),
-                    bills[2] * ((tips[2] / 100) + 1)];
+bills[1] * ((tips[1] / 100) + 1),
+bills[2] * ((tips[2] / 100) + 1)];
 
 console.log(totalValue);
 
 //LECTURE: Introduction to Objects
+
+const myCountry = {
+    country: 'Bulgaria',
+    capital: 'Sofia',
+    language: 'bulgarian',
+    population: 6.95,
+    neighbours: ['Romania', 'Greece', 'Turkey', 'Macedonia', 'Serbia']
+};
+console.log(myCountry);
+
+//LECTURE: Dot vs. Bracket Notation
+
+const info = `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries
+and a capital called ${myCountry.capital}`
+
+console.log(info);
+
+
+myCountry.population = myCountry.population + 2;
+console.log(myCountry);
+
+myCountry['population'] = myCountry.population - 2;
+console.log(myCountry);
+
+//LECTURE: Object Methods
+
+const myCountry2 = {
+    country: 'Bulgaria',
+    capital: 'Sofia',
+    language: 'bulgarian',
+    population: 6.95,
+    neighbours: ['Romania', 'Greece', 'Turkey', 'Macedonia', 'Serbia'],
+
+    describe: function () {
+        console.log(
+            `${this.country} has ${this.population} million 
+    ${this.language}-speaking people, 
+    ${this.neighbours.length} neighbouring countries and a 
+    capital called ${this.capital}.`
+        );
+    },
+
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true :
+            false;
+    }
+};
+
+myCountry2.describe();
+myCountry2.checkIsland();
+console.log(myCountry2);
+
+//-------------------------------------------------------------------------------
+//Coding Challenge #3
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    weight: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    weight: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const markBmi = mark.calcBMI();
+const johnBmi = john.calcBMI();
+
+if (johnBmi > markBmi) {
+    console.log(`${john.firstName}'s BMI (${johnBmi}) is higher than ${mark.firstName}'s (${markBmi})!`);
+} else if (johnBmi < markBmi) {
+    console.log(`${mark.firstName}'s BMI (${markBmi}) is higher than ${john.firstName}'s (${johnBmi})`);
+}
+
+ //LECTURE: Iteration: The for Loop
+
+for (let i = 1; i <= 50; i++) {
+        console.log(`Voter number ${i} is currently voting`)
+}
+
+//LECTURE: Looping Arrays, Breaking and Continuing
