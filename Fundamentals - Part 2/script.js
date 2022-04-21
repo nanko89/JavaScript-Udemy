@@ -247,6 +247,7 @@ if (johnBmi > markBmi) {
     console.log(`${mark.firstName}'s BMI (${markBmi}) is higher than ${john.firstName}'s (${johnBmi})`);
 }
 
+<<<<<<< HEAD
 //LECTURE: Iteration: The for Loop
 
 for (let i = 1; i <= 50; i++) {
@@ -329,3 +330,12 @@ function arr(array) {
 }
 
 console.log(arr(billsTen));
+=======
+ //LECTURE: Iteration: The for Loop
+
+for (let i = 1; i <= 50; i++) {
+        console.log(`Voter number ${i} is currently voting`)
+}
+
+//LECTURE: Looping Arrays, Breaking and Continuing
+>>>>>>> 1b0bc9e9288dd5ecaba3dddb319ed08d3462c1f2
