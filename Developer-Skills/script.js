@@ -1,7 +1,23 @@
 'use strict';
 
-const x = '23';
+//Coding Challenge #1
+let output = '';
+function printForecast(array) {
+  for (let i = 0; i < array.length; i++) {
+    output += `${array[i]}°C in ${i + 1} days... `;
+  }
+}
 
-if (x === 23) console.log(23);
+//Data 1: [17, 21, 23]
+const temperature = [17, 21, 23];
 
-const calcAge = birthYear => 2037 - birthYear;
+//Data 2: [12, 5, -5, 0, 4]
+const temperature2 = [12, 5, -5, 0, 4];
+
+printForecast(temperature);
+
+console.log(output);
+output = '';
+printForecast(temperature2);
+
+console.log(output);
