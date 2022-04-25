@@ -34,11 +34,15 @@ a {
   padding-bottom: 30px;
   border: 1px solid brown;
   width: 400px;
-  margin-left: 440px;
+  margin-left: 425px;
 }
 
 input,
 button {
   padding: 10px;
   font-size: 16px;
+}
+
+#course-image {
+  width: 300px;
 }
