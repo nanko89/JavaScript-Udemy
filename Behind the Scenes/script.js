@@ -50,6 +50,7 @@ const year = '1989';
 //Functions
 
 console.log(addDecl(1, 2)); // return result
+
 /*
     We can't show on the console variable before we declareded 
 console.log(addExpr(1, 2));
@@ -64,3 +65,12 @@ const addExpr = function (a, b) {
 };
 
 const addArrow = (a, b) => a + b;
+
+//Example
+if (!numProduct) deleteShopCard();
+
+var numProduct = 10;
+
+function deleteShopCard() {
+  console.log('All product deleted');
+}
