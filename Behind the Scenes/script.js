@@ -74,3 +74,32 @@ var numProduct = 10;
 function deleteShopCard() {
   console.log('All product deleted');
 }
+
+// This keywords in practice
+
+console.log(this);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+
+calcAgeArrow(1989);
+
+const jonas = {
+  year: 1989,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - year);
+  },
+};
+
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+const f = jonas.calcAge;
+f();
